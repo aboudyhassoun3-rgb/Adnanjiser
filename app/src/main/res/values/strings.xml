@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AJ Class A</string>
+    <string name="school_name">Adnan Al Jisr</string>
+    <string name="class_name">1AS — Section A</string>
+    <string name="notification_channel_general">aj_general</string>
+    <string name="notification_channel_chat">aj_chat</string>
+    <string name="notification_channel_homework">aj_homework</string>
+    <string name="notification_channel_announce">aj_announce</string>
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="login_subtitle">مرحباً بعودتك إلى شعبة A</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="remember_me">تذكرني</string>
+    <string name="action_login">دخول</string>
+    <string name="error_generic">حدث خطأ. حاول مرة أخرى.</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="empty_chats">لا توجد محادثات بعد.</string>
+    <string name="empty_homework">لا توجد واجبات حالياً 🎉</string>
+    <string name="offline_banner">أنت غير متصل — بعض البيانات متاحة دون إنترنت</string>
+</resources>

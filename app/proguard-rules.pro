@@ -1,0 +1,2 @@
+-keep class com.ajclassa.app.** { *; }
+-dontwarn com.google.firebase.**

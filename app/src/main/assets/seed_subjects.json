@@ -1,0 +1,4 @@
+{
+  "note": "Optional seed. Import via Firebase console or backend script. No fake data is bundled in the app itself.",
+  "subjects": ["رياضيات", "فيزياء", "علوم طبيعية", "لغة عربية", "لغة إنجليزية", "لغة فرنسية", "تاريخ وجغرافيا", "إعلام آلي"]
+}

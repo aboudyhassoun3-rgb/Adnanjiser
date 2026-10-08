@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pad_4">4dp</dimen>
+    <dimen name="pad_8">8dp</dimen>
+    <dimen name="pad_12">12dp</dimen>
+    <dimen name="pad_16">16dp</dimen>
+    <dimen name="pad_20">20dp</dimen>
+    <dimen name="pad_24">24dp</dimen>
+    <dimen name="radius_12">12dp</dimen>
+    <dimen name="radius_16">16dp</dimen>
+    <dimen name="radius_20">20dp</dimen>
+</resources>

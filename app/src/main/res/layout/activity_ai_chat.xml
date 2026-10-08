@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical"
+        android:background="@color/bg_elev">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="AJ AI" android:textStyle="bold" android:textSize="18sp"
+            android:textColor="@color/text_primary" android:layout_marginStart="8dp" />
+        <Button android:id="@+id/btnNew" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="+ New" android:minHeight="0dp" android:minWidth="0dp" />
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progress" android:layout_width="match_parent" android:layout_height="4dp"
+        android:indeterminate="true" android:visibility="gone" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:padding="12dp" android:clipToPadding="false" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical"
+        android:background="@color/bg_elev">
+        <ImageButton android:id="@+id/btnAttach" android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_add" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Attach" />
+        <EditText android:id="@+id/etInput" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:hint="اسأل أي شيء…" android:background="@drawable/bg_input"
+            android:padding="12dp" android:textColor="@color/text_primary" android:textColorHint="@color/text_muted" />
+        <ImageButton android:id="@+id/btnMic" android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_mic" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voice" />
+        <ImageButton android:id="@+id/btnSend" android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_send" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Send" />
+    </LinearLayout>
+</LinearLayout>

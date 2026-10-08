@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AJ Class A — single-accent premium dark system -->
+    <color name="bg">#0E0F12</color>
+    <color name="bg_elev">#16181D</color>
+    <color name="bg_card">#1B1E24</color>
+    <color name="bg_card_2">#22262E</color>
+    <color name="stroke">#262B34</color>
+    <color name="text_primary">#F2F3F5</color>
+    <color name="text_secondary">#A7AEB9</color>
+    <color name="text_muted">#6E7683</color>
+    <color name="accent">#7DD3A8</color>
+    <color name="accent_dim">#23402F</color>
+    <color name="accent_text">#0B1510</color>
+    <color name="success">#7DD3A8</color>
+    <color name="warning">#E8C468</color>
+    <color name="danger">#E58E8E</color>
+    <color name="online">#7DD3A8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="splash_bg">#0B0C0E</color>
+    <color name="light_bg">#F5F6F7</color>
+    <color name="light_card">#FFFFFF</color>
+    <color name="light_text">#16181D</color>
+</resources>

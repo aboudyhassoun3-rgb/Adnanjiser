@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/splash_bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center"
+        android:padding="32dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="AJ" android:textSize="56sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:letterSpacing="0.2" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="CLASS A" android:textSize="16sp"
+            android:textColor="@color/accent" android:letterSpacing="0.4"
+            android:layout_marginTop="2dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Adnan Al Jisr • 1AS — Section A" android:textSize="12sp"
+            android:textColor="@color/text_muted" android:layout_marginTop="6dp" />
+        <View android:layout_width="48dp" android:layout_height="1dp"
+            android:background="@color/stroke" android:layout_marginTop="28dp" android:layout_marginBottom="28dp" />
+        <TextView android:id="@+id/tvVerseKind"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="آية اليوم" android:textSize="12sp" android:textColor="@color/accent" />
+        <TextView android:id="@+id/tvVerse"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="﴿وَقُل رَّبِّ زِدْنِي عِلْمًا﴾" android:textSize="24sp"
+            android:textColor="@color/text_primary" android:gravity="center"
+            android:lineSpacingExtra="8dp" android:layout_marginTop="12dp" android:alpha="0" />
+        <TextView android:id="@+id/tvVerseSource"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="" android:textSize="12sp" android:textColor="@color/text_muted"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:id="@+id/tvName" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="—"
+            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
+        <TextView android:id="@+id/tvMeta" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text=""
+            style="@style/Text.AJ.Body" android:layout_marginTop="4dp" />
+        <com.google.android.material.card.MaterialCardView android:id="@+id/rowTools"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="🧰 أدوات الدراسة" android:padding="16dp" android:textColor="@color/text_primary" />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/rowProfile"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="⚙ الإعدادات وتغيير كلمة المرور" android:padding="16dp" android:textColor="@color/text_primary" />
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="ذاكرة AI" android:textColor="@color/text_primary" />
+            <Switch android:id="@+id/swMemory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button android:id="@+id/btnAdmin" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="لوحة الإدارة"
+            android:visibility="gone" android:layout_marginTop="16dp" />
+        <Button android:id="@+id/btnLogout" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="تسجيل الخروج"
+            style="@style/Widget.AJ.Button.Outline" android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

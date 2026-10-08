@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@drawable/ic_back" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Back" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="لوحة الإدارة" android:textSize="20sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <TextView android:id="@+id/tvStats" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="…" android:textColor="@color/text_primary" />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="إنشاء مستخدم (Owner/Admin)" android:textStyle="bold" android:textColor="@color/text_primary" />
+                <EditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="الاسم الكامل" android:textColor="@color/text_primary" android:layout_marginTop="8dp" />
+                <EditText android:id="@+id/etUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Username" android:textColor="@color/text_primary" />
+                <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:inputType="textEmailAddress" android:textColor="@color/text_primary" />
+                <EditText android:id="@+id/etPass" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password" android:inputType="textPassword" android:textColor="@color/text_primary" />
+                <Spinner android:id="@+id/spRole" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnCreate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="إنشاء" android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" />
+    </LinearLayout>
+</ScrollView>

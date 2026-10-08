@@ -1,0 +1,65 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+    function signedIn() { return request.auth != null; }
+    function me() { return get(/databases/$(db)/documents/users/$(request.auth.uid)).data; }
+    function isOwner() { return signedIn() && (me().role == 'OWNER' || me().email == 'aboudyhassoun3@gmail.com'); }
+    function hasPerm(p) { return signedIn() && (isOwner() || (p in me().permissions && me().permissions[p] == true)); }
+    function activeUser() { return signedIn() && exists(/databases/$(db)/documents/users/$(request.auth.uid)) && me().active == true && me().banned != true; }
+
+    match /users/{uid} {
+      allow read: if activeUser() && (request.auth.uid == uid || hasPerm('manageStudents') || hasPerm('editUsers') || isOwner());
+      allow create: if isOwner() || hasPerm('createUsers');
+      allow update: if isOwner() || hasPerm('editUsers') || (request.auth.uid == uid && request.resource.data.diff(resource.data).changedKeys().hasOnly(['lastSeen','online','photoUrl','showOnline','showLastSeen','showReadReceipts','fcmTokens']));
+      allow delete: if isOwner() || hasPerm('deleteUsers');
+    }
+    match /subjects/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('manageSubjects'); }
+    match /lessons/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('manageLessons'); }
+    match /homework/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('createHomework'); }
+    match /submissions/{id} {
+      allow read: if activeUser() && (isOwner() || hasPerm('createHomework') || resource.data.userId == request.auth.uid);
+      allow create: if activeUser() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isOwner() || hasPerm('createHomework');
+    }
+    match /exams/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('createExams'); }
+    match /examResults/{id} {
+      allow read: if activeUser() && (isOwner() || hasPerm('createExams') || resource.data.userId == request.auth.uid);
+      allow create: if activeUser() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isOwner() || hasPerm('createExams');
+    }
+    match /questionBank/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('createExams'); }
+    match /announcements/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('manageAnnouncements'); }
+    match /schedule/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('manageSchedule'); }
+    match /communityMessages/{id} {
+      allow read: if activeUser() && hasPerm('useChat');
+      allow create: if activeUser() && hasPerm('sendMessages') && request.resource.data.senderId == request.auth.uid;
+      allow update: if activeUser() && (isOwner() || hasPerm('moderateChat') || hasPerm('deleteMessages') || resource.data.senderId == request.auth.uid);
+      allow delete: if isOwner() || hasPerm('deleteMessages') || hasPerm('moderateChat');
+    }
+    match /aiChats/{id} {
+      allow read: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+      allow create: if activeUser() && hasPerm('useAI') && request.resource.data.userId == request.auth.uid;
+      allow update: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+      allow delete: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+      match /messages/{mid} {
+        allow read: if activeUser() && (isOwner() || get(/databases/$(db)/documents/aiChats/$(id)).data.userId == request.auth.uid);
+        allow write: if activeUser() && hasPerm('useAI') && (isOwner() || get(/databases/$(db)/documents/aiChats/$(id)).data.userId == request.auth.uid);
+      }
+    }
+    match /notes/{id} {
+      allow read: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+      allow create: if activeUser() && hasPerm('createNotes') && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+    }
+    match /notifications/{id} {
+      allow read: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+      allow create: if isOwner() || hasPerm('sendNotifications');
+      allow update: if activeUser() && (isOwner() || resource.data.userId == request.auth.uid);
+      allow delete: if isOwner() || hasPerm('sendNotifications');
+    }
+    match /libraryFiles/{id} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('uploadFiles'); }
+    match /auditLogs/{id} { allow read: if isOwner() || hasPerm('accessAdminPanel'); allow write: if isOwner() || hasPerm('accessAdminPanel'); }
+    match /settings/{doc} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('manageSettings'); }
+    match /permissions/{doc} { allow read: if activeUser(); allow write: if isOwner() || hasPerm('managePermissions'); }
+  }
+}

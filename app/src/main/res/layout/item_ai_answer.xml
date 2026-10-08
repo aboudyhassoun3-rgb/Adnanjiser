@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingTop="6dp" android:paddingBottom="6dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="AJ AI" android:textSize="11sp" android:textColor="@color/accent" />
+    <TextView android:id="@+id/tvText" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_bubble_other" android:textColor="@color/text_primary"
+        android:padding="14dp" android:textSize="15sp" android:lineSpacingExtra="4dp"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

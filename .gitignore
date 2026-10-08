@@ -1,0 +1,26 @@
+
+screenshots/
+
+*.log
+
+*.pid
+
+.agents/
+
+.agentsweb/
+
+.omgithub-runtime/
+
+.opencode-ssh/
+
+.opencode-web/
+
+node_modules/
+
+# Android
+app/build/
+build/
+.gradle/
+local.properties
+*.apk
+*.aab

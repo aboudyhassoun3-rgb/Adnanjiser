@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="#0E0F12"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="#262B34" stroke-width="10"/>
+  <text x="256" y="300" font-family="Arial, sans-serif" font-size="170" font-weight="bold" fill="#F2F3F5" text-anchor="middle">AJ</text>
+  <rect x="176" y="330" width="160" height="18" rx="9" fill="#7DD3A8"/>
+  <text x="256" y="392" font-family="Arial, sans-serif" font-size="44" letter-spacing="12" fill="#A7AEB9" text-anchor="middle">CLASS A</text>
+</svg>

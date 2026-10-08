@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="AJ CLASS A" android:textSize="13sp" android:textColor="@color/accent" android:letterSpacing="0.3" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="تسجيل الدخول" style="@style/Text.AJ.H1" android:textSize="28sp"
+            android:layout_marginTop="8dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="مرحباً بعودتك إلى شعبة A" style="@style/Text.AJ.Body"
+            android:layout_marginTop="4dp" android:layout_marginBottom="24dp" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Username">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsername" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="text" android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Password" android:layout_marginTop="12dp"
+                    app:passwordToggleEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textPassword" android:textColor="@color/text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <CheckBox android:id="@+id/cbRemember" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="تذكرني"
+                    android:textColor="@color/text_secondary" android:layout_marginTop="8dp" />
+                <TextView android:id="@+id/tvError" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/danger"
+                    android:visibility="gone" android:layout_marginTop="8dp" />
+                <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_gravity="center"
+                    android:visibility="gone" android:layout_marginTop="8dp" />
+                <Button android:id="@+id/btnLogin" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="دخول"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="الحسابات ينشئها المسؤول فقط — اطلب بياناتك من الإدارة"
+            android:textColor="@color/text_muted" android:textSize="12sp"
+            android:gravity="center" android:layout_marginTop="20dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home" android:title="الرئيسية" android:icon="@drawable/ic_home" />
+    <item android:id="@+id/nav_study" android:title="الدراسة" android:icon="@drawable/ic_book" />
+    <item android:id="@+id/nav_ai" android:title="AI" android:icon="@drawable/ic_ai" />
+    <item android:id="@+id/nav_community" android:title="المجتمع" android:icon="@drawable/ic_chat" />
+    <item android:id="@+id/nav_profile" android:title="حسابي" android:icon="@drawable/ic_person" />
+</menu>

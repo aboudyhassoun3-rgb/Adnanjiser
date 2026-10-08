@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:id="@+id/tvDate" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" style="@style/Text.AJ.Caption" />
+        <TextView android:id="@+id/tvHello" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="مرحباً 👋"
+            android:textSize="24sp" android:textStyle="bold" android:textColor="@color/text_primary"
+            android:layout_marginTop="4dp" />
+        <TextView android:id="@+id/tvStreak" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="🔥 0 أيام"
+            android:textColor="@color/accent" android:textSize="13sp" android:layout_marginTop="4dp" />
+        <TextView android:id="@+id/tvContinue" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="" android:visibility="gone"
+            android:background="@drawable/bg_accent_soft" android:textColor="@color/accent"
+            android:padding="12dp" android:layout_marginTop="12dp" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="الحصة القادمة" style="@style/Text.AJ.Caption" />
+                <TextView android:id="@+id/tvNextClass" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="—"
+                    android:textColor="@color/text_primary" android:textSize="16sp"
+                    android:textStyle="bold" android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="12dp" android:weightSum="3">
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardAi"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="🤖\nAI" android:gravity="center" android:padding="14dp"
+                    android:textColor="@color/text_primary" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardCamera"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="📷\nحل سؤال" android:gravity="center" android:padding="14dp"
+                    android:textColor="@color/text_primary" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardTools"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="🧰\nالأدوات" android:gravity="center" android:padding="14dp"
+                    android:textColor="@color/text_primary" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardToday"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="مهام اليوم" android:textStyle="bold" android:textColor="@color/text_primary" />
+                <TextView android:id="@+id/tvTasks" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="—"
+                    android:textColor="@color/text_secondary" android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:layout_marginTop="12dp" android:visibility="gone" />
+        <Button android:id="@+id/btnRetry" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/retry"
+            android:layout_gravity="center" android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

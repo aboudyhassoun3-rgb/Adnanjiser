@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>AJ Class A — Adnan Al Jisr</title>
+<meta name="description" content="منصة الشعبة A — الصف الأول الثانوي، ثانوية عدنان الجسر" />
+<meta name="theme-color" content="#0E0F12" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" type="image/svg+xml" href="icon.svg" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+<div id="splash">
+  <div class="sp-inner">
+    <div class="sp-logo">AJ</div>
+    <div class="sp-sub">CLASS A</div>
+    <div class="sp-school">Adnan Al Jisr • 1AS — Section A</div>
+    <div class="sp-div"></div>
+    <div class="sp-kind" id="spKind">آية اليوم</div>
+    <div class="sp-verse" id="spVerse">﴿وَقُل رَّبِّ زِدْنِي عِلْمًا﴾</div>
+    <div class="sp-src" id="spSrc">سورة طه — الآية 114</div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <header id="topbar"></header>
+  <div id="offlinebar" class="hidden">📡 أنت غير متصل — البيانات المحفوظة متاحة</div>
+  <main id="view"></main>
+  <nav id="bottomnav"></nav>
+  <button id="fab-ai" title="AJ AI" aria-label="AJ AI">🤖</button>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+<input type="file" id="global-file" class="hidden" accept="image/*" />
+<script src="js/core.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/router.js"></script>
+<script src="js/views.js"></script>
+<script src="js/views2.js"></script>
+<script src="js/community.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/fbsync.js"></script>
+<script>
+try {
+  if ('serviceWorker' in navigator && /^https?:/.test(location.protocol)) {
+    window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
+  }
+} catch(e){}
+window.addEventListener('DOMContentLoaded', function(){ AJ.boot(); });
+</script>
+</body>
+</html>

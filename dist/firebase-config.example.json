@@ -1,0 +1,9 @@
+{
+  "_note": "انسخ هذا الملف إلى firebase-config.json وضع قيم مشروعك من Firebase Console. عند وجوده يعرض التطبيق زر مزامنة Firebase في الإعدادات (قراءة/كتابة نفس مجموعات Firestore الخاصة بتطبيق Android). لا تضع أي مفتاح سري هنا.",
+  "apiKey": "REPLACE_ME",
+  "authDomain": "aj-class-a-placeholder.firebaseapp.com",
+  "projectId": "aj-class-a-placeholder",
+  "storageBucket": "aj-class-a-placeholder.appspot.com",
+  "messagingSenderId": "000000000000",
+  "appId": "1:000000000000:web:0000000000000000"
+}
